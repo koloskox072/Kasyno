@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp13.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="BlackJack" HorizontalOptions="Center" FontSize="Header"/>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Image Source="blank.png" x:Name="dealer1"/>
+                <Image Source="blank.png" x:Name="dealer2"/>
+            </HorizontalStackLayout>
+            <Label Text="Twoje karty: " HorizontalOptions="Center" FontSize="Large" x:Name="test"/>
+            <HorizontalStackLayout HorizontalOptions="Center" x:Name="kartyGracza">
+                <Image Source="blank.png" x:Name="gracz1"/>
+                <Image Source="blank.png" x:Name="gracz2"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button Text="Nowa gra" IsVisible="True" Clicked="nowaGra" x:Name="btn1"/>
+                <Button Text="Hit" IsVisible="False" Clicked="hit" x:Name="btn2"/>
+                <Button Text="stay" IsVisible="False" Clicked="stay" x:Name="btn3"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
