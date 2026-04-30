@@ -83,9 +83,23 @@
             btn2.IsVisible = true;
             btn3.IsVisible = true;
         }
+        public void check()
+        {
+            if (countGracz > 21)
+            {
+                dealer2.Source = dealer[1].karta + ".png";
+                btn1.IsVisible = true;
+                btn2.IsVisible = false;
+                btn3.IsVisible = false;
+                dealer2.Source = dealer[1].karta + ".png";
+            }
+        }
         public void stay(object sender, EventArgs e)
         {
-
+            dealer2.Source = dealer[1].karta + ".png";
+            btn1.IsVisible = true;
+            btn2.IsVisible = false;
+            btn3.IsVisible = false;
         }
         public void hit(object sender, EventArgs e)
         {
@@ -95,13 +109,7 @@
             kartyGracza.Add(img);
             countGracz = countGracz + karty[a].value;
             gracz.Add(karty[a]);
-            if (countGracz > 21)
-            {
-                dealer2.Source = dealer[1].karta + ".png";
-                btn1.IsVisible = true;
-                btn2.IsVisible = false;
-                btn3.IsVisible = false;
-            }
+            check();
         }
     }
 }
